@@ -1,0 +1,8 @@
+langchain
+google-generativeai
+flask
+werkzeug
+pandas
+pdfplumber
+openai
+chromadb

@@ -1,0 +1,190 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Summary</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Audit Summaries</h1>
+
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mb-3">Upload More Files</a>
+
+        {% for summary in audit_summaries %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>{{ summary.File }}</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Audit Parameters</h6>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Audit Parameter</th>
+                                <th>Result (Yes=1/No=0)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in summary.Summary.iterrows() %}
+                                <tr>
+                                    <td>{{ row[1]['Audit Parameter'] }}</td>
+                                    <td>{{ row[1]['Result (Yes=1/No=0)'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <hr>
+
+                    <h6>Generated Summary from Gemini API</h6>
+                    <div class="bg-light p-3 mb-3">
+                        <p>{{ summary.Generated_Summary }}</p>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="{{ summary.Download_Link }}" class="btn btn-success">Download Audit Report</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Summaries</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Audit Summaries</h1>
+
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mb-3">Upload More Files</a>
+
+        {% for summary in audit_summaries %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>{{ summary.File }}</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Audit Parameters</h6>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Audit Parameter</th>
+                                <th>Result (Yes=1/No=0)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in summary.Summary.iterrows() %}
+                                <tr>
+                                    <td>{{ row[1]['Audit Parameter'] }}</td>
+                                    <td>{{ row[1]['Result (Yes=1/No=0)'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <hr> <!- Horizontal line added here -->
+<!--
+                    <h6>Generated Summary</h6>
+                    <ul>
+                    <p>{{ summary.Generated_Summary }}</p>
+
+                    <div class="text-center"> <!- Centering the download button -->
+
+<!--
+                        <a href="{{ summary.Download_Link }}" class="btn btn-success">Download Report</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Summaries</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">service-report-analyzer-AI</h1>
+        <h4 class="text-center">Audit Summaries</h4>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mb-3">Upload More Files</a>
+
+        {% for summary in audit_summaries %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>{{ summary.File }}</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Audit Parameters</h6>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Audit Parameter</th>
+                                <th>Result (Yes=1/No=0)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in summary.Summary.iterrows() %}
+                                <tr>
+                                    <td>{{ row[1]['Audit Parameter'] }}</td>
+                                    <td>{{ row[1]['Result (Yes=1/No=0)'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <hr> <!-- Horizontal line added here -->
+
+                    <h6>Comments</h6>
+                    <ul>
+                        {% set bullets = summary.Generated_Summary.replace('"', '').split('.') %}
+                        {% for bullet in bullets %}
+                            {% set trimmed_bullet = bullet.strip() %}
+                            {% if trimmed_bullet %}
+                                <li>{{ trimmed_bullet }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+
+                    <div class="text-center"> <!-- Centering the download button -->
+                        <a href="{{ summary.Download_Link }}" class="btn btn-success">Download Report</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

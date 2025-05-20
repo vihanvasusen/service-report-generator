@@ -1,0 +1,68 @@
+Services Onsite Service Call Report
+WO No. 4015010345 Type Onsite
+Customer 26-Sep-2024
+Vivbkanand kumar Call Logged date
+Name 07:07 PM
+Company lifetime international pvt.ltd. Part Delivery Date
+Address 01-Oct-
+Ward number 15 kishunpuraSiwan Police Station Basantpur, Pat Cust scheduled
+with Pin 2024,12:00
+Near BDS Public SchoolKISHUNPURA, 841416 date and time
+Code AM
+Phone Reason for Delay in
++9181234567890
+numbers engineer visit
+Email email.a@lifecell.in
+ENGINEER DETAILS Call Status (Closing Code Description)
+Full name Md Arsad
+Fixed
+Problem Fixed No Parts Replaced
+Tech ID # INCS19040103
+Model Serial No. Machine Type Engineer arrival Dt/time 30-Sep-2024,09:34 PM
+System Details Activity Start Dt/time 30-Sep-2024,09:35 PM
+S1Y900 PG02CHZE 20RA
+Activity End Dt/time 30-Sep-2024,09:48 PM
+Problem(s)
+Dear Team, I am facing a heating issue with my laptop. I have been using the laptop for more than 1 hour.
+Description :
+Diagnostic
+heating issue
+Notes :
+System check found same issue over heating issue , system open dust clear and fan clean and thermal
+Repair Notes :
+pest clean and system normal working no any Hardware issue.
+Post-Repair CHECKLIST
+Post-Repair Cosmetic AC adapter/battery
+Normal
+Check charging
+Update MTM/SN/UUID USB &amp; I/O Ports/SD
+/Product Name Slot/Sim Slot
+Update latest BIOS/FW Speaker/Audio jack
+/Driver /Webcam/Microphone
+Lan Port/Wifi/WWAN
+LCD touch/rotate/flip test
+/Bluetooth
+LCD Lid open/close degree
+No Part Replacement
+check no flickering
+Lenovo Diagnostic Code
+Lenovo Diagnostic ResultDefective Part
+No FRU# Barcode Scan (pre-repair) DESCRIPTION FSP Disposition Code
+Replacement Part
+No FRU# Barcode DESCRIPTION
+Disclaimer:-
+Except as agreed to in writing between Customer and Lenovo, services under this Workorder are subject to Lenovo's
+standard services terms & conditions available at www.lenovo.com. Customer is responsible for all restoring, reloading,
+backing up all data, licenses and software before receiving the services. Lenovo Service offerings do not include
+loading/reloading Customer's software applications, licenses or data post repair.
+LENOVO IS NOT RESPONSIBLE FOR LOSS OF DATA/SOFTWARE.
+For further assistance or queries, contact infsupport@lenovo.com.
+Customer Remarks:
+Customer Signature
+Field Service Engineer Signature
+Lenovo Technologies Customer Contact Center
+Eticket Link
+https://pcsupport.lenovo.com/servicerequest
+Contact us
+https://pcsupport.lenovo.com/en/products/laptops-and-netbooks/contactus
+Chat support
